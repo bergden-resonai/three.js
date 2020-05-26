@@ -10904,6 +10904,7 @@
 
 				var array = attribute.array;
 				var itemSize = attribute.itemSize;
+				var normalized = attribute.normalized === true;
 
 				var array2 = new array.constructor( indices.length * itemSize );
 
@@ -10921,7 +10922,7 @@
 
 				}
 
-				return new BufferAttribute( array2, itemSize );
+				return new BufferAttribute( array2, itemSize, normalized );
 
 			}
 
